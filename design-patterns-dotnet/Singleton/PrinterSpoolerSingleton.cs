@@ -1,23 +1,14 @@
 ﻿//public class PrinterSpoolerSingleton
 //{
-//    private static PrinterSpoolerSingleton? _instance;
-//    private static readonly object instanceLock = new();
+//    private static readonly Lazy<PrinterSpoolerSingleton> _instance =
+//        new Lazy<PrinterSpoolerSingleton>(() => new PrinterSpoolerSingleton());
+//    private static readonly object instanceLock = new object();
 
 //    private PrinterSpoolerSingleton() { }
 
 //    public static PrinterSpoolerSingleton GetInstance()
 //    {
-//        if (_instance == null)
-//        {
-//            lock (instanceLock)
-//            {
-//                if (_instance == null)
-//                {
-//                    _instance = new PrinterSpoolerSingleton();
-//                }
-//            }
-//        }
-//        return _instance;
+//        return _instance.Value;
 //    }
 
 //    public void Print(string document)
